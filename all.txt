@@ -1,0 +1,42 @@
+----------
+var express = require('express');
+var app = express();
+
+app.get('/',function(req,res){
+	var name="Saurabh";
+	res.json("My name is "+name);
+
+});  // Get the index file
+
+//app.post(); // Server Response
+//app.put(); // Updating the Data
+//app.delete(); //Delete from the Server
+
+app.listen(3000,function(err){
+	if(err) throw err;
+	console.log("Server is running");
+});
+
+-------
+
+var express = require('express');
+var app = express();
+var morgan = require('morgan');
+
+//Middleware
+app.use(morgan('dev')); //Logs all action to terminal
+
+app.get('/',function(req,res){
+	var name="Saurabh";
+	res.json("My name is "+name);
+
+});  // Get the index file
+
+
+app.listen(3000,function(err){
+	if(err) throw err;
+	console.log("Server is running");
+});
+
+-----------
+

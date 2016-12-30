@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+    <script src="require.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">   </script>
+
+   <script type="text/javascript">
+   $('document').ready(function(){
+
+      $("#datepicker").datepicker({
+       dateFormat:"dd-mm-yy",
+      showWeek: true,
+      changeMonth: true,
+      changeYear: true,
+      yearRange:"-116:+0",
+        beforeShow: function (textbox, instance) {   
+        instance.dpDiv.css({
+            marginLeft: textbox.offsetWidth+ (7) + 'px'
+        });
+        }
+
+      //maxDate:new Date(currentYear,CurrentMonth,CurrentDate)
+    });
+  });
+   $('.validnum').numeric();
+      function phonenumber(inputtxt)  
+   {  
+  var phoneno = /^[0-9]+$/;  
+  if(inputtxt.value.match(phoneno))  
+  {  
+      return true;  
+  }  
+  else  
+  {  
+     alert("Not a valid Phone Number");  
+     return false;  
+  }  
+  }
+    
+
+    </script>
+ 
+    <title>cKYC- Powered by Colonus</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/demo.css">
+
+    <!-- Custom styles for this template -->
+    <link href="/css/cover.css" rel="stylesheet">
+    <link href="/css/signup/signup.css" rel="stylesheet">
+  </head>
+
+<body>  
+    <div class="site-wrapper">
+    <% if(errors.length >0){ %>
+    <div class="alert alert-danger alert-dismissible" role="alert">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%= errors %>
+    </div>
+
+    <%}%>
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+          
+            <div class="inner">
+              <h3 class="masthead-brand">Powered by <a href="www.colonus.io" style="color: green;">Colonus</a></h3>
+              <nav class="nav nav-masthead">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link active" href="/signup">Sign Up</a>
+                <a class="nav-link" href="/signin">Sign In</a>
+                <a class="nav-link" href="#">Contact</a>
+              </nav>
+            </div>
+          </div>
+          <div class="inner cover">
+          	<div class="container">
+    
+      <form  name ="form1" class="form-signin" method="post" action ="#">
+        <h2 class="form-signin-heading">Please Sign Up</h2>
+
+        <input name="firstname" type="text" class="form-control" placeholder="First Name"  style ="text-transform: capitalize;" required autofocus>
+        <input name="lastname" type="text" class="form-control" placeholder="Last Name" style ="text-transform: capitalize;" required autofocus>
+        <input type="text" name="dob" id="datepicker" class="form-control" size="30" placeholder="Date of Birth"  required autofocus>
+        <input type="text" class="form-control"  name ="pan" placeholder="PAN Card number" title="Enter valid PAN Number" style ="text-transform:uppercase;" required autofocus>
+        <input type="text" id="aadhar" maxlength="12" class="form-control" name="aadhar" placeholder="Aadhar Card number" title="Enter valid  Aadhar Number " required autofocus>
+        <input name="mobile" type="text" class="form-control" placeholder="Mobile Number" title="Enter valid Mobile Number" maxlength="10" required autofocus> 
+        <input name="email" type="email" class="form-control" placeholder="Email address" required autofocus>
+        <input type="password" type="password" class="form-control" placeholder="Password" required>
+        
+        <button type="submit" class="btn btn-lg btn-primary btn-block btn-success" type="submit"  onclick="phonenumber(document.form1.mobile)" style="color: black;">Sign Up</button>
+        
+
+      </form>
+
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <IE10 viewport hack for Surface/desktop Windows 8 bug >
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script-->
+    
+  </body>
+</html>

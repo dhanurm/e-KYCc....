@@ -1,0 +1,28 @@
+extends ../main/layout
+
+
+block head
+	//Custom styles for this template
+	script(src='/custom/signup1/signup1.js')
+	link(href='/custom/signup1/signup1.css', rel='stylesheet')
+
+block body
+	.site-wrapper
+	.site-wrapper-inner
+		.cover-container
+			.inner.cover
+				.container
+					ul.errors
+						if errors
+							each error, i in errors
+								li.alert.alert-danger #{error.msg}
+				form.form-signin(name='form1', method='post')
+					h2.form-signin-heading  Sign Up
+
+					input#aadhar.form-control(type='text', maxlength='12', name='aadhar', placeholder='Aadhar Card number*', title='Enter valid  Aadhar Number ', required='', autofocus='')
+
+					input.form-control(type='text', name='pan', placeholder='PAN Card number*', title='Enter valid PAN Number', onchange='validate(this.value)', required='', autofocus='')
+
+					input#datepicker.form-control(type='text', name='dob', size='30', onchange='validate(this.value)', placeholder='Date of Birth*', required='', autofocus='')
+					button#button.btn.btn-lg.btn-primary.btn-block.btn-success.form-control(type='submit', style='color: black;')
+						a(href='/signup2.html') Sign Up

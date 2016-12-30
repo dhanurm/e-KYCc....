@@ -1,0 +1,31 @@
+doctype html
+html
+  head
+    title WebRTC: Still photo capture demo
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/css/webcam/webcam.css', type='text/css', media='all')
+    script(src='/js/webcam.js')
+    style.
+      p{
+      margin-top:230px;
+      }
+  body
+    .contentarea
+      h4(style='color:white') Please provide your Photo for Verification.
+      .camera
+        video#video Video stream not available.
+        button#startbutton Take photo
+      canvas#canvas
+      .output
+        img#photo(alt='The screen capture will appear in this box.')
+      br
+      br
+      input#password(type='password', placeholder='password', title='Enter password ', required='', autofocus='')
+      span#password_strength
+      br
+      br
+      input#conpassword(type='password', placeholder='confirm-password', title='Enter confirm password ', required='', autofocus='')
+      p(style='color:white')
+        | Powered by 
+        a(href='www.colonus.io', style='color:green') Colonus
+        | , 2016.

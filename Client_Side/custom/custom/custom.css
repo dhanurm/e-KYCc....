@@ -1,0 +1,39 @@
+body{
+	background: #333;
+	font-family: Arial;
+	text-align: center;
+	margin: 10% auto;
+}
+.form-signin{
+		align-self: center;
+		background: #B2CFFF;
+		margin: 0 auto;
+		text-align: center;
+		-webkit-border-radius:20px;
+		-moz-border-radius:20px;
+		border-radius:20px;
+		width: 100%;
+
+}
+.form-signin input{
+	width:100%;
+}
+#button a{
+	color: black;
+}
+
+.form-signin-heading{
+	padding-top: -10px;
+	padding-bottom: 20px;
+	font: bold 3em Arial;
+	color: black;
+	border-bottom: 1px dotted blue;
+}
+.mastfoot{
+	font: 1.5em Arial;
+	color: grey;
+	text-align: center;
+}
+.form-control{
+	margin-bottom: 6px;
+}

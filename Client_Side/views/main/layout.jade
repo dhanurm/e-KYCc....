@@ -1,0 +1,34 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='../../favicon.ico')
+
+    // Bootstrap core Files
+    link(href='/bootstrap/css/bootstrap.css', rel='stylesheet')
+    script(src='/bootstrap/js/bootstrap.js')
+
+    //JQuery and JQueryUI
+    script(src='/jquery/jquery.js')
+    script(src='/jquery/jquery-ui.js')
+    link(href='/jquery/jquery-ui.css', rel='stylesheet')
+    link(href='/custom/layout/layout.css', rel='stylesheet')
+
+
+    block head
+
+  body
+    #content
+      block body
+    .mastfoot
+        .inner
+              p
+                | |  Powered by 
+                a(href='www.colonus.io', style='color:green') Colonus
+                | , 2016.  |
+

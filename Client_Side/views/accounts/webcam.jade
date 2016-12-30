@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title WebRTC: Still photo capture demo
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='/css/webcam/webcam.css', type='text/css', media='all')
+    script(src='/js/webcam.js')
+  body
+    .contentarea
+      h1
+        | Please provide your Photo for Verification.
+      .camera
+        video#video Video stream not available.
+        button#startbutton Take photo
+      canvas#canvas
+      .output
+        img#photo(alt='The screen capture will appear in this box.')

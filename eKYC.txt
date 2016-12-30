@@ -1,0 +1,14 @@
+User Schema for eKYC : 
+
+var UserSchema = new Schema({
+	password: String,
+	profile:{
+		name:{type: String,unique: false},
+		dob:{type: Date,default:Date.now},
+		aadhar:{type:Number,unique:true},
+		pan:{type:Number,unique:true},
+		mobile:{type:Number,unique:true},
+		email: { type:String, unique:true, lowercase:true}
+	}
+})
+------------------------------------

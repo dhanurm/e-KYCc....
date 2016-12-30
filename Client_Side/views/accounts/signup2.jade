@@ -1,0 +1,70 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='')
+    // form validation
+    script(src='http://s.codepen.io/assets/libs/modernizr.js', type='text/javascript')
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css')
+    link(rel='stylesheet', href='css/boot.css')
+    script(src='js/boot.js')
+    link(rel='stylesheet prefetch', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet prefetch', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet prefetch', href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css')
+    link(rel='icon', href='../../favicon.ico')
+    script(src='require.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    title cKYC- Powered by Colonus
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/demo.css')
+    // Custom styles for this template
+    link(href='/css/cover.css', rel='stylesheet')
+    link(href='/css/signup/signup.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='signup1.css')
+    title cKYC- Powered by Colonus
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/demo.css')
+    // Custom styles for this template
+    link(href='/css/cover.css', rel='stylesheet')
+    link(href='/css/signup/signup.css', rel='stylesheet')
+  body
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              h3.masthead-brand
+                | Powered by 
+                a(href='www.colonus.io', style='color: green;') Colonus
+              nav.nav.nav-masthead
+                a.nav-link(href='/') Home
+                a.nav-link.active(href='/signup') Sign Up
+                a.nav-link(href='/signin') Sign In
+                a.nav-link(href='#') Contact
+          .inner.cover
+            .container
+              ul.errors
+                if errors
+                  each error, i in errors
+                    li.alert.alert-danger #{error.msg}
+              form.form-signin(name='form1', method='post')
+                h2.form-signin-heading Please Sign Up
+                input.form-control(name='firstname', type='text', placeholder='First Name', style='text-transform: capitalize;', required='', autofocus='')
+                input.form-control(name='lastname', type='text', placeholder='Last Name', style='text-transform: capitalize;', required='', autofocus='')
+                input.form-control(name='mobile', type='tel', placeholder='Mobile Number', title='Enter valid Mobile Number', maxlength='10', required='', autofocus='')
+                input.form-control(name='email', type='email', placeholder='Email address', required='', autofocus='')
+                input.form-control(name='place', type='text', placeholder='City/Town', required='', autofocus='')
+                input.form-control(name='pincode', type='text', placeholder='Pincode', required='', autofocus='')
+                input.form-control(type='password', name='password', placeholder='Password (8-20)', required='', autofocus='')
+                input.form-control(type='password', name='password2', placeholder='Retype Password', required='', autofocus='')
+                button.btn.btn-lg.btn-primary.btn-block.btn-success(type='submit', style='color: black;')
+                  a(href='/signup2') Sign Up

@@ -1,0 +1,132 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    // The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='description', content='')
+    meta(name='author', content='')
+    // form validation
+    script(src='http://s.codepen.io/assets/libs/modernizr.js', type='text/javascript')
+    link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css')
+    link(rel='stylesheet', href='css/boot.css')
+    script(src='js/boot.js')
+    link(rel='stylesheet prefetch', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    link(rel='stylesheet prefetch', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css')
+    link(rel='stylesheet prefetch', href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css')
+    //
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">   </script>
+      <link rel="stylesheet" href="css/style.css">
+      <!--end form validation
+    link(rel='icon', href='../../favicon.ico')
+    script(src='require.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
+    script(src='https://code.jquery.com/jquery-1.12.4.js')
+    script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+    title cKYC- Powered by Colonus
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/demo.css')
+    // Custom styles for this template
+    link(href='/css/cover.css', rel='stylesheet')
+    link(href='/css/signup/signup.css', rel='stylesheet')
+    link(rel='stylesheet', type='text/css', href='signup1.css')
+    title cKYC- Powered by Colonus
+    // Bootstrap core CSS
+    link(href='/css/bootstrap.min.css', rel='stylesheet')
+    link(rel='stylesheet', href='/css/demo.css')
+    // Custom styles for this template
+    link(href='/css/cover.css', rel='stylesheet')
+    link(href='/css/signup/signup.css', rel='stylesheet')
+  body
+    .site-wrapper
+      .site-wrapper-inner
+        .cover-container
+          .masthead.clearfix
+            .inner
+              nav.nav.nav-masthead
+                a.nav-link(href='/') Home
+                a.nav-link.active(href='/signup') Sign In
+          .inner.cover
+            .container
+              h3 Your Information has been send to bank 
+              h3  After sucessful ckecking send you confirm massage
+              br
+              a.nav-link.active(href='/signup', style='color:green') Sign In
+          .mastfoot(style='margin-left: 20px;')
+            .inner
+              p
+                | Powered by 
+                a(href='www.colonus.io', style='color:green') Colonus
+                | , 2016.
+    
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    //
+      Placed at the end of the document so the pages load faster >
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+      <script src="../../dist/js/bootstrap.min.js"></script>
+      <IE10 viewport hack for Surface/desktop Windows 8 bug >
+      <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script
+//
+  <div class="row">
+  <div class="col-lg-8 col-md-offset-3">
+  <% if(errors.length >0){ %>
+  <div class="alert alert-danger alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  <span aria-hidden="true">&times;</span>
+  </button>
+  <%= errors %>
+  </div>
+  <%}%>
+  <form method="post">
+  <h1>Sign Up</h1>
+  <div class="form-group">
+  <label="name">First Name:</label>
+  <input type="text" class="form-control" name="firstname">
+  </div>
+  <div class="form-group">
+  <label="name">Last Name:</label>
+  <input type="text" class="form-control" name="lastname">
+  </div>
+  <div class="form-group">
+  <label="name">Mobile:</label>
+  <input type="number" class="form-control" name="mobile">
+  </div>
+  <div class="form-group">
+  <label="name">Date of Birth:</label>
+  <input type="date" class="form-control" name="dob">
+  </div>
+  <div class="form-group">
+  <label="name">Aadhar Card:</label>
+  <input type="number" class="form-control" name="aadhar">
+  </div>
+  <div class="form-group">
+  <label="name">PAN Card:</label>
+  <input type="text" class="form-control" name="pan">
+  </div>
+  <div class="form-group">
+  <label="name">Email:</label>
+  <input type="text" class="form-control" name="email">
+  </div>
+  <div class="form-group">
+  <label="name">Password:</label>
+  <input type="password" class="form-control" name="password">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  </div>
+  </div>
+  <style type="text/css">
+  .row{
+  padding-left: 380px;
+  }
+  </style>
